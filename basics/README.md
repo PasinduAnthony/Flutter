@@ -14,7 +14,7 @@ Flutter is an open-source UI software development kit created by Google. It is u
 
 [TOC]
 
-**Creating an Flutter project
+**Creating an Flutter project**
 
     `flutter create <application name>`
 
@@ -22,7 +22,7 @@ The Demo flutter project will look this.
 
 [![](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/1.png)](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/1.png)
 
-**Scafflod Widget
+**Scafflod Widget**
     
 It provides a framework which implements the basic material design visual layout structure of the flutter app.
     
@@ -49,7 +49,7 @@ void main() {
 ```
 [![Scaffold Widget](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/2.png "Scaffold Widget")](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/2.png "Scaffold Widget")
 
-**AppBar Widget
+**AppBar Class**
 
 This appBar widget is inside Scaffold Widget
 
@@ -71,7 +71,7 @@ void main() {
 ```
 [![AppBar Widget](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/3.png "AppBar Widget")](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/3.png "AppBar Widget")
 
-***BackgroundColor
+***BackgroundColor***
 
 It is a property which can be applied to any widget in flutter 
 
@@ -80,7 +80,7 @@ It is a property which can be applied to any widget in flutter
 In the above code AppBars background color has been set to blue 
 [Flutter Colors](https://api.flutter.dev/flutter/material/Colors-class.html "Flutter Colors")
 
-***Title
+***Title***
 
 It is also a property 
 
@@ -88,5 +88,48 @@ It is also a property
 In the above code title property has Text widget 
 
 
-    
+**Body Property**    
+
+Body Structure 
+
+[![Body](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/4.png "Body")](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/4.png "Body")
+[![Body Structure](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/5.png "Body Structure")](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/5.png "Body Structure")
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Text('Flutter Basics'),
+        ),
+        body: Container(
+          decoration: new BoxDecoration(
+            image: new DecorationImage(
+                image: new NetworkImage(
+                    'https://www.kolpaper.com/wp-content/uploads/2019/12/City-night-wallpaper.jpg'),
+                fit: BoxFit.fill,
+                colorFilter: new ColorFilter.mode(
+                    Colors.black.withOpacity(0.6), BlendMode.dstATop)),
+          ),
+          child: Center(
+            child: Text(
+              "IOS/Android/Web Applications by flutter",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+```
+
+
 
