@@ -14,13 +14,15 @@ Flutter is an open-source UI software development kit created by Google. It is u
 
 [TOC]
 
-#Creating an Flutter project
+**Creating an Flutter project
+
     `flutter create <application name>`
+
 The Demo flutter project will look this.
 
 [![](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/1.png)](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/1.png)
 
-#Scafflod Widget
+**Scafflod Widget
     
 It provides a framework which implements the basic material design visual layout structure of the flutter app.
     
@@ -46,5 +48,45 @@ void main() {
 }
 ```
 [![Scaffold Widget](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/2.png "Scaffold Widget")](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/2.png "Scaffold Widget")
+
+**AppBar Widget
+
+This appBar widget is inside Scaffold Widget
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Text('Flutter Basics'),
+        ),
+      ),
+    ),
+  );
+}
+```
+[![AppBar Widget](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/3.png "AppBar Widget")](https://raw.githubusercontent.com/PasinduAnthony/Flutter/images/3.png "AppBar Widget")
+
+***BackgroundColor
+
+It is a property which can be applied to any widget in flutter 
+
+`backgroundColor: Colors.blue,`
+
+In the above code AppBars background color has been set to blue 
+[Flutter Colors](https://api.flutter.dev/flutter/material/Colors-class.html "Flutter Colors")
+
+***Title
+
+It is also a property 
+
+`title: Text('Flutter Basics')`
+In the above code title property has Text widget 
+
+
     
 
